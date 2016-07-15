@@ -3,6 +3,7 @@
 	<name>kr-scg-web</name>
 	<comment></comment>
 	<projects>
+		<project>kr-scg-nws</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
