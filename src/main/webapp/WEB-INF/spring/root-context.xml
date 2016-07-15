@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+	<!-- // <bean id="ds_mysql_1" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName" value="java:/comp/env/jdbc/mysql_1" /> </bean> 
+		<bean id="ds_mysql_2" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName" value="java:/comp/env/jdbc/mysql_2" /> </bean> 
+		<bean id="ds_oracle_1" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName" value="java:/comp/env/jdbc/oracle_1" /> </bean> 
+		<bean id="ds_oracle_2" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName" value="java:/comp/env/jdbc/oracle_2" /> </bean> 
+		// -->
+
+	<bean id="ds_mysql_1"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/scg1" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="ds_mysql_2"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/scg2" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="ds_oracle_1"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:oracle:thin:@10.1.9.32:33100:dmis" />
+		<property name="username" value="scgs_parkyk" />
+		<property name="password" value="scgs_parkyk" />
+	</bean>
+
+	<bean id="ds_oracle_2"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:oracle:thin:@10.1.9.32:33100:dmis" />
+		<property name="username" value="scgs_parkyk" />
+		<property name="password" value="scgs_parkyk" />
+	</bean>
+
+</beans>
